@@ -65,3 +65,28 @@ for (i=0; i<npersone.length;i++){
     console.log(users[npersone[i]])
 }
 
+let counter = 0
+for (i=0; i<npersone.length;i++){
+  if (users[npersone[i]].isLoggedIn === true){
+    counter++;
+  }
+  
+}
+console.log(counter)
+
+let counterp = 0
+for (i=0; i<npersone.length;i++){
+  if (users[npersone[i]].isLoggedIn === true && users[npersone[i]].points >= 50){
+    counterp++;
+  }
+}
+console.log(counterp)
+
+let counterm=0
+for (i=0; i<npersone.length;i++){
+  
+ if (users[npersone[i]].skills.includes('JavaScript') && users[npersone[i]].skills.includes('MongoDB') && users[npersone[i]].skills.includes('React') && users[npersone[i]].skills.includes('Node')){
+  counterm++;
+ }
+}
+console.log(`Ci sono ${counterm} MERN developer nel gruppo`)
