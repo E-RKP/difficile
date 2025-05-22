@@ -90,3 +90,91 @@ for (i=0; i<npersone.length;i++){
  }
 }
 console.log(`Ci sono ${counterm} MERN developer nel gruppo`)
+
+users.Luca = {}
+console.log(users)
+
+
+    const utenti = [
+    {
+        _id: 'ab12ex',
+        username: 'Alex',
+        email: 'alex@alex.com',
+        password: '123123',
+        createdAt:'08/01/2020 9:00 AM',
+        isLoggedIn: false
+    },
+    {
+        _id: 'fg12cy',
+        username: 'Asab',
+        email: 'asab@asab.com',
+        password: '123456',
+        createdAt:'08/01/2020 9:30 AM',
+        isLoggedIn: true
+    },
+    {
+        _id: 'zwf8md',
+        username: 'Brook',
+        email: 'brook@brook.com',
+        password: '123111',
+        createdAt:'08/01/2020 9:45 AM',
+        isLoggedIn: true
+    },
+    {
+        _id: 'eefamr',
+        username: 'Martha',
+        email: 'martha@martha.com',
+        password: '123222',
+        createdAt:'08/01/2020 9:50 AM',
+        isLoggedIn: false
+    },
+    {
+        _id: 'ghderc',
+        username: 'Thomas',
+        email: 'thomas@thomas.com',
+        password: '123333',
+        createdAt:'08/01/2020 10:00 AM',
+        isLoggedIn: false
+    }
+    ];
+    
+    
+    function SignUp (){
+
+      const newUtente = {
+        _id: 'nevni', //(qualcosa.value)
+        username: 'Luca',
+        email: 'luca@luca.com',
+        password: '123317033',
+        createdAt:'10/02/2025 10:00 AM',
+        isLoggedIn: false
+      }
+
+      for (i=0; i<utenti.length;i++){
+        if (utenti[i].email === newUtente.email || utenti[i].username === newUtente.username){
+          console.log('Utente già esistente')
+          return;
+        }
+      }
+
+      utenti.push(newUtente)
+      
+    }
+
+    SignUp();
+    console.log(utenti)
+
+    function signIn (emai, passwor){
+
+      for (i=0; i<utenti.length;i++){
+        if (utenti[i].email === emai && utenti[i].password === passwor){
+          console.log(`Benritrovato ${utenti[i].username}`)
+        }else{
+          console.log('Email o Password sbagliati')
+        }
+          
+      }
+      }
+
+    
+    signIn('luca@luca.com','123317033');
