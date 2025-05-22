@@ -188,6 +188,7 @@ console.log(users)
     description: 'Huawei Honor',
     price: 200,
     ratings: [
+
       { userId: 'fg12cy', rate: 5 },
       { userId: 'zwf8md', rate: 4.5 }
     ],
@@ -211,7 +212,33 @@ console.log(users)
   }
 ]
 
+function addRating(name, userIc, n){
 
-function rating(){
-  
+  for (i=0; i<products.length;i++){
+    if (products[i]._id === name){
+      products[i].ratings.push({userId: userId, rate: n})
+    }
+  }
 }
+
+addRating();
+
+function avgRating(){
+  const average = {}
+
+  for (i=0; i<products.length;i++){
+
+    const ratings = products[i].ratings
+    console.log(ratings)
+
+
+    for (j=0; j< ratings.length;j++) {
+       console.log((ratings[j].rate)) 
+    }
+
+
+      
+  }
+}
+
+avgRating();
