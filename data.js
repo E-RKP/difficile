@@ -51,3 +51,17 @@ const users = {
 }
 
 
+let max = 0
+let npersone = Object.keys(users)
+for (i=0; i<npersone.length;i++){
+
+  let nskill = users[npersone[i]].skills.length
+  if (nskill > max){
+    max = nskill;
+  }
+}
+for (i=0; i<npersone.length;i++){
+  if (max === users[npersone[i]].skills.length)
+    console.log(users[npersone[i]])
+}
+
